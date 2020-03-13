@@ -1,4 +1,5 @@
 import os
+import sys
 import magic
 import mimetypes
 
@@ -7,6 +8,7 @@ import mimetypes
 def moveFile(orig_path, new_path):
     if(orig_path != new_path and new_path is not None):
         os.rename(orig_path, new_path)
+        print("     Moved ", orig_path, " to ", new_path)
 
 def getType(file_path):
 
